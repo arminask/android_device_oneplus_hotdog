@@ -42,20 +42,18 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.0-impl-wrapper.recovery \
-    android.hardware.boot@1.0-impl-wrapper \
-    android.hardware.boot@1.0-impl.recovery \
-    bootctrl.$(PRODUCT_PLATFORM) \
-    bootctrl.$(PRODUCT_PLATFORM).recovery \
+    android.hardware.boot@1.2-service \
+    bootctrl.msmnile \
+    bootctrl.msmnile.recovery \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery \
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.1-impl-mock \
     fastbootd \
     resetprop
 
@@ -72,16 +70,14 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES_ENG += \
     tzdata_twrp
 
-# Apex libraries
-#PRODUCT_COPY_FILES += \
-#    $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
-
 # OEM otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(LOCAL_PATH)/security/oneplus \
     $(LOCAL_PATH)/security/pixelexperience \
 
 PRODUCT_BUILD_RECOVERY_IMAGE := true
+
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Crypto (forces FBE v2 regardless of PRODUCT_SHIPPING_API_LEVEL)
 # ensure you remove CONFIG_DM_CRYPT=y from your kernel config or set ro.crypto.allow_encrypt_override=true
