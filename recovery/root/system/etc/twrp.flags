@@ -3,13 +3,7 @@
 /boot            emmc     /dev/block/bootdevice/by-name/boot           flags=slotselect
 /dtbo            emmc     /dev/block/bootdevice/by-name/dtbo           flags=slotselect
 
-/metadata        ext4     /dev/block/bootdevice/by-name/metadata
-/data            ext4     /dev/block/bootdevice/by-name/userdata       fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption
-/storage       	 ext4     /data/media/0       		     		flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
-
-#/firmware        vfat     /dev/block/bootdevice/by-name/modem          flags=slotselect;display="Firmware";mounttodecrypt;fsflags=ro
 /firmware        vfat     /dev/block/bootdevice/by-name/modem          flags=slotselect;display="Firmware";fsflags=ro
-#/vendor/firmware_mnt	vfat /dev/block/bootdevice/by-name/modem          flags=slotselect;display="Firmware2";fsflags=ro
 /misc            emmc     /dev/block/bootdevice/by-name/misc
 
 /modem           emmc     /dev/block/bootdevice/by-name/modem          flags=slotselect;backup=1;display="Modem"
