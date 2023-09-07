@@ -84,13 +84,13 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # https://source.android.com/docs/security/features/encryption/file-based
 # https://source.android.com/docs/security/features/encryption/metadata
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.crypto.volume.filenames_mode=aes-256-cts \
         ro.crypto.volume.metadata.method=dm-default-key \
         ro.crypto.dm_default_key.options_format.version=2
 
 # adoptable storage:
 # https://source.android.com/docs/security/features/encryption/file-based#enabling-fbe-on-adoptable-storage
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized \
         ro.crypto.volume.contents_mode=aes-256-xts \
-        ro.crypto.volume.filenames_mode=aes-256-cts
+        ro.crypto.volume.filenames_mode=aes-256-cts \
+        ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0
+
