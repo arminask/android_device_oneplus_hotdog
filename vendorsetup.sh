@@ -1,6 +1,6 @@
 # DIRTY WORKAROUND to get FBEv2 working on hotdog
-TFILE=$OUT/fscrypt.patched
-[ ! -d "$OUT" ]&& mkdir -p $OUT
+TFILE=$PWD/out/fscrypt.patched
+[ ! -d "out" ]&& mkdir -p out
 RET=0
 
 if [ -f "$TFILE" ];then
