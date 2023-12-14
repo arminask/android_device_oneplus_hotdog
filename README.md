@@ -44,22 +44,23 @@ known OS with fully working FBE v2:
 - [X] MTP export
 - [X] ADB: shell, push/pull, logcat
 - [X] FBEv2: decrypt /data - Only working for Custom OS's (not tested on STOCK)
+- [X] FBEv2: decrypt /data/media (internal storage)
 
-### Untested / NOT working
+### Untested
 
-- [ ] FBEv2: decrypt /data/media (internal storage)
-- [ ] Backup to internal/microSD
-- [ ] Restore from internal/microSD
-- [ ] F2FS/EXT4 Support, exFAT/NTFS where supported
-- [ ] backup/restore to/from external (USB-OTG) storage
-- [ ] ADB: update.zip sideload
-- [ ] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
+- Backup to internal/microSD
+- Restore from internal/microSD
+- F2FS support
+- backup/restore to/from external (USB-OTG) storage
+- backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
 
-#### Not working - OxygenOS specific
+## NOT WORKING
 
-- Decryption and probably everything that requires it
+- ADB: update.zip sideload
+- decrypting STOCK / Oxygen OS and probably everything that requires it
+- decrypting non-FBEv2 encrypted OS (by design)
 
-##### Credits
+## Credits
 
 - CaptainThrowback for original trees.
 - mauronofrio for original trees.
