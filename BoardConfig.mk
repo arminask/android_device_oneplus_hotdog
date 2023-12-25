@@ -214,3 +214,5 @@ RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 TW_NO_SCREEN_BLANK := true
 #last resort if TW_NO_SCREEN_BLANK is not working:
 #TW_NO_SCREEN_TIMEOUT := true
+# required to fix build error (expexted expression)
+TW_MAX_BRIGHTNESS := 255
