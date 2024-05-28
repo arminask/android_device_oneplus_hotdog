@@ -31,20 +31,14 @@ fastboot flash recovery recovery.img
 
 ## Features
 
-This tree supports FBE v2 ONLY! That means your OS has to support FBE v2 in order to get it decrypted by this TWRP.
-
-known OS with fully working FBE v2:
-
-- [AXP.OS](https://axp.binbash.rocks)
-
 ### Tested / Working
 
 - [X] Flashing ROMs (custom OS's)
 - [X] all important partitions listed in mount/backup lists
 - [X] MTP export
 - [X] ADB: shell, push/pull, logcat
-- [X] FBEv2: decrypt /data - Only working for Custom OS's (not tested on STOCK)
-- [X] FBEv2: decrypt /data/media (internal storage)
+- [X] FBEv1: decrypt /data - Only working for Custom OS's (not tested on STOCK)
+- [X] FBEv1: decrypt /data/media (internal storage)
 
 ### Untested
 
@@ -57,8 +51,8 @@ known OS with fully working FBE v2:
 ## NOT WORKING
 
 - ADB: update.zip sideload
+- FastbootD doesn't show up on PC
 - decrypting STOCK / Oxygen OS and probably everything that requires it
-- decrypting non-FBEv2 encrypted OS (by design)
 
 ## Credits
 
