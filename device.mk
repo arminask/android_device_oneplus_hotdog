@@ -58,7 +58,7 @@ PRODUCT_PACKAGES += \
     resetprop
 
 # qcom decryption
-PRODUCT_PACKAGES_ENG += \
+PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
@@ -76,21 +76,3 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(LOCAL_PATH)/security/pixelexperience \
 
 PRODUCT_BUILD_RECOVERY_IMAGE := true
-
-PRODUCT_SHIPPING_API_LEVEL := 29
-
-# Crypto (forces FBE v2 regardless of PRODUCT_SHIPPING_API_LEVEL)
-# ensure you remove CONFIG_DM_CRYPT=y from your kernel config or set ro.crypto.allow_encrypt_override=true
-# https://source.android.com/docs/security/features/encryption/file-based
-# https://source.android.com/docs/security/features/encryption/metadata
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.crypto.volume.metadata.method=dm-default-key \
-        ro.crypto.dm_default_key.options_format.version=2
-
-# adoptable storage:
-# https://source.android.com/docs/security/features/encryption/file-based#enabling-fbe-on-adoptable-storage
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.crypto.volume.contents_mode=aes-256-xts \
-        ro.crypto.volume.filenames_mode=aes-256-cts \
-        ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0
-
