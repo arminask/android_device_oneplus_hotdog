@@ -36,7 +36,7 @@ fastboot flash recovery recovery.img
 - [X] Flashing ROMs (custom OS's)
 - [X] all important partitions listed in mount/backup lists
 - [X] MTP export
-- [X] ADB: shell, push/pull, logcat
+- [X] ADB: sideload, push/pull, logcat, shell
 - [X] FBEv1: decrypt /data - Only working for Custom OS's (not tested on STOCK)
 - [X] FBEv1: decrypt /data/media (internal storage)
 
@@ -50,9 +50,7 @@ fastboot flash recovery recovery.img
 
 ## NOT WORKING
 
-- ADB: update.zip sideload
 - FastbootD doesn't show up on PC
-- decrypting STOCK / Oxygen OS and probably everything that requires it
 
 ## Credits
 
