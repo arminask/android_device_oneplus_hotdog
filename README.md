@@ -1,5 +1,33 @@
 # TWRP device tree for OnePlus 7T Pro (hotdog)
 
+TWRP with additional functionality for hotdog devices dualbooting Windows ARM. <br />
+Included scripts to reboot to windows/android, dump modem in TWRP. <br />
+Included additional binaries in TWRP: mass storage mode, parted. <br />
+This only applies if you specifically have Oneplus 7T Pro (hotdog). <br />
+**Using it for another device is very dangerous. Verify that the scripts flash to the correct partitions for your phone!** <br />
+<br />
+Additional partitions included in TWRP "Mount" page:
+- Windows (Main Windows NTFS partition, it will only mount if you named your partition `win`).
+- ESP (Windows EFI FAT32 partition, it will only mount if you named your partition `esp`). <br />
+<br />
+By default, these scripts look for images in the TWRP root directory: <br />
+- UEFI.img is the UEFI that you're using <br />
+- android-boot.img is your stock Android boot image <br />
+- devcfg_oos11.img is devcfg.img extracted from your device OOS11 firmware <br />
+- devcfg_oos12.img is devcfg.img extracted from your device OOS12 firmware <br />
+<br />
+If you want to include images to an already compiled TWRP, unpack it with Android Image Kitchen and put it in the ramdisk folder (it's the same root directory as `/system/root`). <br />
+<br />
+Please note that if you include these .img files inside your TWRP image, it might not boot on your device because of your recovery size. To get around this, you can put your .img files your userdata partition (userdata needs to be mounted and decrypted first!) and then change .img locations in scripts. <br />
+
+## Script functionality
+To run each script, execute these commands in the terminal: <br />
+- `dump-modem` - Mounts your Windows partition and flashes modemst1/2 to Windows qcremotefs directory.
+- `boot-windows` - Flashes OOS 11 devcfg.img and UEFI partition, then reboots to Windows.
+- `boot-android` - Flashes OOS 12 devcfg.img and your stock Android boot image, then reboots to Android.
+- `msc` - Enables mass storage mode on your phone.
+- `parted` - Binary for partition editing.
+<br />
 ## Disclaimer - Unofficial TWRP!
 
 These are personal test builds of mine. In no way do I hold responsibility if it/you messes up your device.
