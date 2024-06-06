@@ -8,7 +8,7 @@ Proceed at your own risk.
 ## Compile
 
 Setup repo tool from here https://source.android.com/setup/develop#installing-repo
-
+Initialize and sync minimal manifest for TWRP: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp
 To build, execute these commands in order
 
 ```
@@ -39,11 +39,9 @@ fastboot flash recovery recovery.img
 - [X] ADB: sideload, push/pull, logcat, shell
 - [X] FBEv1: decrypt /data - Only working for Custom OS's (not tested on STOCK)
 - [X] FBEv1: decrypt /data/media (internal storage)
+- [X] Backup/Restore to/from internal storage
 
 ### Untested
-
-- Backup to internal/microSD
-- Restore from internal/microSD
 - F2FS support
 - backup/restore to/from external (USB-OTG) storage
 - backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
@@ -54,6 +52,7 @@ fastboot flash recovery recovery.img
 
 ## Credits
 
+- AXP-OS / steadfasterX for modifying TWRP tree
 - CaptainThrowback for original trees.
 - mauronofrio for original trees.
 - TWRP team and everyone involved for their amazing work.
