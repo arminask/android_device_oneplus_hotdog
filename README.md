@@ -8,7 +8,9 @@ Proceed at your own risk.
 ## Compile
 
 Setup repo tool from here https://source.android.com/setup/develop#installing-repo
-Initialize and sync minimal manifest for TWRP: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp
+
+Initialize and sync minimal manifest TWRP: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp
+
 To build, execute these commands in order
 
 ```
