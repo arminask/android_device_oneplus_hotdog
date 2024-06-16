@@ -58,12 +58,12 @@ Minor checks
 - [x] reboot to recovery
 - [x] poweroff
 - [ ] battery level
-- [ ] temperature (Untested)
+- [x] temperature
 - [ ] encrypted backups (Untested)
 - [x] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
 - [ ] USB mass storage export (Untested)
-- [ ] set brightness (Untested)
-- [ ] vibrate (Untested)
+- [x] set brightness
+- [x] vibrate
 - [x] screenshot
 - [ ] partition SD card (Device doesn't have an SD card slot)
 
