@@ -35,7 +35,7 @@ fastboot flash recovery recovery.img
 
 Blocking checks
 - [x] Correct screen/recovery size
-- [ x Working Touch, screen
+- [x] Working Touch, screen
 - [x] Backup to internal/microSD
 - [x] Restore from internal/microSD
 - [x] reboot to system
@@ -45,7 +45,7 @@ Medium checks
 - [x] update.zip sideload
 - [x] UI colors (red/blue inversions)
 - [x] Screen goes off and on
-- [x] F2FS/EXT4 Support, exFAT/NTFS where supported
+- [ ] F2FS/EXT4 Support, exFAT/NTFS where supported (F2FS support is untested)
 - [x] all important partitions listed in mount/backup lists
 - [ ] backup/restore to/from external (USB-OTG) storage (not supported by the device)
 - [ ] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
@@ -53,19 +53,19 @@ Medium checks
 - [ ] Correct date
 
 Minor checks
-- [ ] MTP export
+- [ ] MTP export (Untested)
 - [x] reboot to bootloader
 - [x] reboot to recovery
 - [x] poweroff
 - [ ] battery level
-- [ ] temperature
-- [ ] encrypted backups
+- [ ] temperature (Untested)
+- [ ] encrypted backups (Untested)
 - [x] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
-- [ ] USB mass storage export
-- [ ] set brightness
-- [ ] vibrate
+- [ ] USB mass storage export (Untested)
+- [ ] set brightness (Untested)
+- [ ] vibrate (Untested)
 - [x] screenshot
-- [ ] partition SD card
+- [ ] partition SD card (Device doesn't have an SD card slot)
 
 ### Tested / Working
 
