@@ -22,12 +22,18 @@ This only applies if you specifically have Oneplus 7T Pro (hotdog). <br />
 
 
 ## Script functionality
-To run each script, execute these commands in the terminal: <br />
+<sub>WoA Tools page is a bit broken, once you enter the page, you cannot go back</sub>
+<br>
+<img src="https://i.imgur.com/XJUDQHo.jpeg" align="left" height="780" width="360" >
+<img src="https://i.imgur.com/JQ05HFj.jpeg" align="center" height="780" width="360" >
+
+
+Each button executes the corresponding scripts: <br />
 - `dump-modem` - Mounts your Windows partition and flashes modemst1/2 to Windows qcremotefs directory.
 - `boot-windows` - Flashes OOS 11 devcfg and UEFI partition, then reboots to Windows.
 - `boot-android` - Flashes OOS 12 devcfg and your stock Android boot image, then reboots to Android.
 - `msc` - Enables mass storage mode on your phone.
-- `parted` - Binary for partition editing.
+- `parted` - Binary for partition editing. (Can only be executed in shell)
 
 
 ## Disclaimer - Unofficial TWRP!
@@ -69,7 +75,7 @@ fastboot flash recovery recovery.img
 - [X] all important partitions listed in mount/backup lists
 - [X] MTP export
 - [X] ADB: sideload, push/pull, logcat, shell
-- [X] FBEv1: decrypt /data - Only working for Custom OS's (not tested on STOCK)
+- [X] FBEv1: decrypt /data - Only working for Custom OS's (not tested on stock OS)
 - [X] FBEv1: decrypt /data/media (internal storage)
 - [X] Backup/Restore to/from internal storage
 
@@ -80,7 +86,7 @@ fastboot flash recovery recovery.img
 
 ## NOT WORKING
 
-- FastbootD doesn't show up on PC
+- In FastbootD mode device doesn't show up on PC
 
 ## Credits
 
