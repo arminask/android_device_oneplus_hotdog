@@ -84,7 +84,8 @@ Minor checks
 
 ## NOT WORKING
 
-- FastbootD doesn't show up on PC
+- In FastbootD mode device doesn't show up on PC
+- Battery percentage
 
 ## Credits
 
