@@ -87,6 +87,7 @@ fastboot flash recovery recovery.img
 ## NOT WORKING
 
 - In FastbootD mode device doesn't show up on PC
+- Battery percentage
 
 ## Credits
 
