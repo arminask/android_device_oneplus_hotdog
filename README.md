@@ -57,7 +57,7 @@ Minor checks
 - [x] reboot to bootloader
 - [x] reboot to recovery
 - [x] poweroff
-- [ ] battery level
+- [x] battery level
 - [x] temperature
 - [ ] encrypted backups (Untested)
 - [x] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
@@ -65,7 +65,7 @@ Minor checks
 - [x] set brightness
 - [x] vibrate
 - [x] screenshot
-- [ ] partition SD card (Device doesn't have an SD card slot)
+- [x] partition SD card (Device doesn't have an SD card slot)
 
 ### Tested / Working
 
@@ -82,10 +82,8 @@ Minor checks
 - backup/restore to/from external (USB-OTG) storage
 - backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
 
-## NOT WORKING
-
-- In FastbootD mode device doesn't show up on PC
-- Battery percentage
+## Issues
+- adbd service starts only after the user decrypts userdata on prompt, the expected functionality is adb starts working immediately after TWRP boot up, init script needs to be fixed.
 
 ## Credits
 
