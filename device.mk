@@ -51,7 +51,7 @@ PRODUCT_PACKAGES += \
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# fastbootd
+# FastbootD
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd \
@@ -69,10 +69,5 @@ PRODUCT_SOONG_NAMESPACES += \
 # tzdata
 PRODUCT_PACKAGES_ENG += \
     tzdata_twrp
-
-# OEM otacert
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/security/oneplus \
-    $(LOCAL_PATH)/security/pixelexperience \
 
 PRODUCT_BUILD_RECOVERY_IMAGE := true
