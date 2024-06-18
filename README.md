@@ -92,6 +92,7 @@ Minor checks
 
 ## Issues
 - adbd service starts only after the user decrypts userdata on prompt, the expected functionality is adb starts working immediately after TWRP boot up, init script needs to be fixed.
+- A/B slot switching doesn't work
 
 ## Credits
 
