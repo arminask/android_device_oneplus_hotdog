@@ -7,9 +7,17 @@ Proceed at your own risk.
 
 ## Compile
 
-Setup repo tool from here https://source.android.com/setup/develop#installing-repo
+Install repo tool from here: https://gerrit.googlesource.com/git-repo
 
 Initialize and sync minimal manifest TWRP: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp
+
+Clone device tree:
+
+```
+# Assuming you're in the synced TWRP repo
+mkdir -p  device/oneplus
+git clone https://github.com/arminask/android_device_oneplus_hotdog device/oneplus/hotdog
+```
 
 To build, execute these commands in order
 
