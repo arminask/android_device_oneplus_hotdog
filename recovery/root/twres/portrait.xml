@@ -4039,13 +4039,6 @@
 					</actions>
 				</listitem>
 
-				<listitem name="Dump modem and boot to Windows">
-					<actions>
-						<action function="set">tw_back=WoATools</action>
-						<action function="cmd">dump-modem-boot-windows</cmd>
-					</actions>
-				</listitem>
-
 				<listitem name="Dump modem">
 					<actions>
 						<action function="set">tw_back=WoATools</action>
@@ -4057,6 +4050,13 @@
 					<actions>
 						<action function="set">tw_back=WoATools</action>
 						<action function="cmd">msc</cmd>
+					</actions>
+				</listitem>
+
+				<listitem name="Reboot to system">
+					<actions>
+						<action function="set">tw_back=WoATools</action>
+						<action function="cmd">reboot</cmd>
 					</actions>
 				</listitem>
 
