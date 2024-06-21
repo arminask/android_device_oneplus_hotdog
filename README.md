@@ -55,7 +55,7 @@ Medium checks
 - [x] Screen goes off and on
 - [ ] F2FS/EXT4 Support, exFAT/NTFS where supported (F2FS support is untested)
 - [x] all important partitions listed in mount/backup lists
-- [ ] backup/restore to/from external (USB-OTG) storage (not supported by the device)
+- [ ] backup/restore to/from external (USB-OTG) storage
 - [ ] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
 - [x] decrypt /data
 - [ ] Correct date
@@ -68,7 +68,7 @@ Minor checks
 - [x] battery level
 - [x] temperature
 - [ ] encrypted backups (Untested)
-- [x] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
+- [x] input devices via USB (USB-OTG) - keyboard, mouse and disks
 - [ ] USB mass storage export (Untested)
 - [x] set brightness
 - [x] vibrate
@@ -84,18 +84,20 @@ Minor checks
 - [X] FBEv1: decrypt /data - Only working for Custom OS's (not tested on STOCK)
 - [X] FBEv1: decrypt /data/media (internal storage)
 - [X] Backup/Restore to/from internal storage
+- [X] A/B slot switching 
 
 ### Untested
 - F2FS support
 - backup/restore to/from external (USB-OTG) storage
-- backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
+- backup/restore to/from adb
 
 ## Issues
-- adbd service starts only after the user decrypts userdata on prompt, the expected functionality is adb starts working immediately after TWRP boot up, init script needs to be fixed.
-- A/B slot switching doesn't work
+- adb connection only starts working when user decrypts userdata on TWRP bootup prompt. Not sure if it's by design, but expected functionality is adb starts working immediately on bootup.
+This will mainly affect users who use roms with different userdata encryption, to get around it, start adb sideloading and then cancel it, adb connection will start working normally.
 
 ## Credits
 
+- [Rabilgic hotdogb device tree for reference to fix slot switching](https://github.com/rabilgic/twrp_device_oneplus_hotdogb)
 - AXP-OS / steadfasterX for modifying TWRP tree
 - CaptainThrowback for original trees.
 - mauronofrio for original trees.
