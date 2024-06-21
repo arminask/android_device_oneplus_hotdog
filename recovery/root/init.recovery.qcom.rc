@@ -43,21 +43,17 @@ service mount-dynamic-rw /system/bin/mount-dynamic-rw.sh
 
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
-
-    # Create location for fs_mgr to store abbreviated output from filesystem
-    # checker programs.
+    start boot-hal-1-1
+    setprop sys.usb.config adb
     mkdir /dev/fscklogs 0770 root system
-    # debug decrypt:
-    #setprop prepdecrypt.setpatch true
-    #setprop prepdecrypt.loglevel 2
 
 on boot
     setprop sys.usb.config adb
     start health-hal-2-1
-    #chmod 0777 mount-dynamic-rw.sh
     chmod 0777 /system/bin/unified-script.sh
     start unified-script
-    #start mount-dynamic-rw
+    chmod 0777 /system/bin/make-fake-partitions-service.sh
+    start make-fake-partitions-service
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -68,6 +64,12 @@ on fs
     symlink /dev/block/bootdevice/by-name/oem_stanvbk /dev/block/bootdevice/by-name/oem_stanvbk_b
     symlink /dev/block/bootdevice/by-name/oem_dycnvbk /dev/block/bootdevice/by-name/oem_dycnvbk_a
     symlink /dev/block/bootdevice/by-name/oem_dycnvbk /dev/block/bootdevice/by-name/oem_dycnvbk_b
+    symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_a
+    symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_b
+    symlink /dev/block/bootdevice/by-name/mdm_oem_dycnvbk /dev/block/bootdevice/by-name/mdm_oem_dycnvbk_a
+    symlink /dev/block/bootdevice/by-name/mdm_oem_dycnvbk /dev/block/bootdevice/by-name/mdm_oem_dycnvbk_b
+    symlink /dev/block/bootdevice/by-name/spunvm /dev/block/bootdevice/by-name/spunvm_a
+    symlink /dev/block/bootdevice/by-name/spunvm /dev/block/bootdevice/by-name/spunvm_b
 
     # Set fscklog permission
     chown root system /dev/fscklogs/log
